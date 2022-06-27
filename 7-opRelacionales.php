@@ -3,16 +3,14 @@
         $valorA = $_POST['valorA'];
         $valorB = $_POST['valorB'];
 
-        $suma = $valorA + $valorB;
-        $resta = $valorA - $valorB;
-        $division = $valorA / $valorB;
-        $multiply = $valorA * $valorB;
-        $residuo = $valorA % $valorB;
-        echo '<br>'.'Suma: '.$suma;
-        echo '<br>'.'Resta: '.$resta;
-        echo '<br>'.'Division: '.$division;
-        echo '<br>'.'Multiply: '.$multiply;
-        echo '<br>'.'Residuo: '.$residuo;
+        if ($valorA > $valorB) {
+            echo $valorA.' Mayor que '.$valorB;
+        } else if ($valorA < $valorB) {
+            echo $valorB.' Mayor que '.$valorA;
+        } else {
+            echo $valorB.' Igual que '.$valorA;
+        }
+        
     }
 
 ?>
@@ -26,7 +24,7 @@
     <title>Operadores Aritmeticos</title>
 </head>
 <body>
-    <form action="6-opAritmeticos.php" method="post">
+    <form action="7-opRelacionales.php" method="post">
         Valor A:
         <input type="number" name="valorA" id="">
         <br>
